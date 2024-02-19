@@ -18,10 +18,12 @@ useSeoMeta({
 
 })
 const { isDark } = useCustomTheme()
+
+const { themes } = useTheme()
 </script>
 
 <template>
-  <div :class="isDark ? 'bg-red' : 'bg-blue'">
+  <div :style="{ background: `${themes[isDark ? 'dark' : 'light'].colors.background}` }">
     <div class="max-w-[1450px] mx-auto px-4">
       <VApp :theme="isDark">
         <NuxtLayout>
