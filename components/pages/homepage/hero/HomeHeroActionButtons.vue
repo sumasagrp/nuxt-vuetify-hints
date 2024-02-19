@@ -16,7 +16,6 @@ const { smAndDown } = useDisplay()
 
     <VBtn
       :block="smAndDown"
-
       class="rounded-xl border"
       color="black-button"
       size="x-large"
