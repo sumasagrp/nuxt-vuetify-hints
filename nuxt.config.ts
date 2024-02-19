@@ -115,9 +115,20 @@ export default defineNuxtConfig({
   },
 
   vuetify: {
+
     vuetifyOptions: 'config/vuetify/vuetify.config.ts',
 
     moduleOptions: {
+
+      ssrClientHints: {
+
+        prefersColorSchemeOptions: {
+          useBrowserThemeOnly: false,
+        },
+
+        viewportSize: true,
+      },
+
       styles: {
         configFile: 'assets/vuetify/settings.scss',
       },
