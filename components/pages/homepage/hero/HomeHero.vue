@@ -23,6 +23,7 @@
     </div>
 
     <template #avatar>
+      <ThemeSwitch />
       <!-- <HomeHeroLottie2 /> -->
     </template>
   </SquareImageCard>

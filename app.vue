@@ -21,7 +21,7 @@ const { isDark } = useCustomTheme()
 </script>
 
 <template>
-  <div>
+  <div :class="isDark ? 'bg-red' : 'bg-blue'">
     <div class="max-w-[1450px] mx-auto px-4">
       <VApp :theme="isDark">
         <NuxtLayout>
