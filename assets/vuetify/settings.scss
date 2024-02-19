@@ -1,0 +1,20 @@
+
+@forward 'vuetify/settings' with (
+
+  // Tabs
+  $tab-slider-size: 2px,
+
+  // Buttons
+  $button-disabled-opacity: 0.5,
+  $button-disabled-overlay: 0.1,
+  $button-text-transform: false,
+
+  // Fields
+  $field-input-opacity: 0.9,
+  $field-outline-opacity: 0.9,
+  $field-transition-timing: 0s,
+  $field-subtle-transition-timing: 0s,
+  $field-focused-border-width: 2.5px,
+  $field-control-solo-elevation: 0,
+
+);

@@ -1,0 +1,36 @@
+{
+  "include": [
+    "./vite.config.*",
+    "./**/*",
+    "./**/*.vue"
+  ],
+  "exclude": [
+    "./dist",
+    "./node_modules"
+
+  ],
+  "compilerOptions": {
+    "target": "esnext",
+    "module": "esnext",
+    "moduleResolution": "node",
+
+    "paths": {
+      "@/*": [
+        "./*"
+      ],
+
+      "@core/*": [
+        "./@core/*"
+      ],
+
+      "@core": [
+        "./@core"
+      ]
+
+    },
+    "types": [
+      "vite/client",
+      "vite-plugin-vue-layouts/client"
+    ]
+  }
+}
