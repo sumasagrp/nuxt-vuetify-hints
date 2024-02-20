@@ -15,21 +15,33 @@ useSeoMeta({
   twitterDescription: description,
   ogTitle: title,
   ogUrl: url,
-
 })
-const { isDark } = useCustomTheme()
 
-const { themes } = useTheme()
+const { colorMode } = useCustomTheme()
 </script>
 
 <template>
-  <div :style="{ background: `${themes[isDark ? 'dark' : 'light'].colors.background}` }">
-    <div class="max-w-[1450px] mx-auto px-4">
-      <VApp :theme="isDark">
-        <NuxtLayout>
-          <NuxtPage />
-        </NuxtLayout>
-      </VApp>
-    </div>
+  <div class="max-w-[1450px] mx-auto px-4">
+    <theme-switch />
+    <VApp :theme="colorMode.preference">
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
+    </VApp>
   </div>
 </template>
+
+<style>
+body {
+  background-color: #fff;
+  color: rgba(0, 0, 0, 0.8);
+}
+.dark-mode body {
+  background-color: #091a28;
+  color: #ebf4f1;
+}
+.sepia-mode body {
+  background-color: #f1e7d0;
+  color: #433422;
+}
+</style>

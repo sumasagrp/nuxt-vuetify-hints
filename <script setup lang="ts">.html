@@ -1,0 +1,14 @@
+<script setup lang="ts">
+const { colorMode } = useCustomTheme()
+</script>
+
+<template>
+  <div >
+    <VApp :theme="colorMode.preference">
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
+    </VApp>
+  </div>
+</template>
+

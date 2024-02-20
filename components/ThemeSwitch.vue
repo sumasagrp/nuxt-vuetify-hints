@@ -1,15 +1,23 @@
-<script setup lang="ts">
-const { isDark, toggle } = useCustomTheme()
+<script setup>
+const { colorMode } = useCustomTheme()
 </script>
 
 <template>
-  <VBtn
-    class="mr-1 mask mask-hexagon"
-    rounded="lg"
-    size="small"
-    icon
-    @click.stop="toggle()"
-  >
-    <Icon :name="isDark ? 'carbon:sun' : 'carbon:asleep-filled' " />
-  </VBtn>
+  <div>
+    <h1>Color mode: {{ colorMode.value }}</h1>
+    <select v-model="colorMode.preference">
+      <option value="system">
+        System
+      </option>
+      <option value="light">
+        Light
+      </option>
+      <option value="dark">
+        Dark
+      </option>
+      <option value="system">
+        Sepia
+      </option>
+    </select>
+  </div>
 </template>

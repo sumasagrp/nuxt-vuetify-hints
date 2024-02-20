@@ -10,10 +10,23 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@vueuse/nuxt',
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode',
     'unplugin-fonts/nuxt',
     'vuetify-nuxt-module',
+    // 'nuxt-delay-hydration',
 
   ],
+
+  colorMode: {
+    preference: 'system', // default value of $colorMode.preference
+    fallback: '',
+    hid: 'nuxt-color-mode-script',
+    globalName: '__NUXT_COLOR_MODE__',
+    componentName: 'ColorScheme',
+    classPrefix: '',
+    classSuffix: '-mode',
+    storageKey: 'nuxt-color-mode',
+  },
 
   unfonts: {
     custom: {
@@ -138,6 +151,10 @@ export default defineNuxtConfig({
 
   features: {
     inlineStyles: false,
+  },
+
+  typescript: {
+    strict: false,
   },
 
   devtools: { enabled: false },
