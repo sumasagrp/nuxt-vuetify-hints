@@ -13,6 +13,8 @@ export default defineVuetifyConfiguration({
   },
 
   defaults: {
+    global: { transition: false },
+
     ...defaultsNative,
     ...defaultsCustom,
   },

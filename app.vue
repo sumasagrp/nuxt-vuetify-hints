@@ -22,7 +22,7 @@ const boot = ref(false)
 onMounted(() => {
   setTimeout(() => {
     boot.value = true
-  }, 200)
+  }, 250)
 })
 </script>
 
