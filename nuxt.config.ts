@@ -9,9 +9,10 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@pinia/nuxt',
     '@vueuse/nuxt',
-    // '@nuxtjs/tailwindcss',
+    '@nuxtjs/tailwindcss',
     'unplugin-fonts/nuxt',
     'vuetify-nuxt-module',
+
   ],
 
   unfonts: {
@@ -45,16 +46,6 @@ export default defineNuxtConfig({
         imports: ['useDisplay', 'useTheme'],
       },
 
-      {
-        from: '@vueuse/core',
-        imports: ['useColorMode'],
-      },
-
-      {
-        from: '@vueuse/components',
-        imports: ['UseColorMode'],
-      },
-
     ],
   },
 
@@ -66,18 +57,9 @@ export default defineNuxtConfig({
 
   vite: {
 
-    optimizeDeps: {
-      exclude: [
-        'vuetify',
-      ],
-    },
 
     define: {
       'process.env.DEBUG': false,
-    },
-
-    ssr: {
-      noExternal: ['vuetify'],
     },
 
     resolve: {
@@ -88,7 +70,7 @@ export default defineNuxtConfig({
 
   },
 
-  sourcemap: false,
+  // sourcemap: false,
 
   css: [
     'assets/vuetify/main.scss',
@@ -98,18 +80,19 @@ export default defineNuxtConfig({
 
   ],
 
-  postcss: {
-    plugins: {
-      'tailwindcss/nesting': {},
-      'tailwindcss': {},
-      'autoprefixer': {},
-    },
-  },
+  // postcss: {
+  //   plugins: {
+  //     'tailwindcss/nesting': {},
+  //     'tailwindcss': {},
+  //     'autoprefixer': {},
+  //   },
+  // },
 
   vuetify: {
-    vuetifyOptions: 'config/vuetify/vuetify.config.ts',
-    moduleOptions: {
 
+    vuetifyOptions: 'config/vuetify/vuetify.config.ts',
+
+    moduleOptions: {
       ssrClientHints: {
         viewportSize: true,
       },
@@ -117,6 +100,7 @@ export default defineNuxtConfig({
       styles: {
         configFile: 'assets/vuetify/settings.scss',
       },
+
     },
   },
 
@@ -124,9 +108,6 @@ export default defineNuxtConfig({
     inlineStyles: false,
   },
 
-  typescript: {
-    strict: false,
-  },
 
   devtools: { enabled: false },
 

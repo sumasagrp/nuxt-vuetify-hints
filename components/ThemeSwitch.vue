@@ -1,21 +1,15 @@
 <script setup>
-const { $vuetify } = useNuxtApp()
-
-const mode = useColorMode({
-  emitAuto: true,
-
-  onChanged: (mode) => {
-    $vuetify.theme.global.name.value = mode
-  },
-})
+const { isDark, toggleDark } = useCustomTheme()
 </script>
 
 <template>
-  <div>
-    Color mode: {{ mode }}
-    <VSelect
-      v-model="mode"
-      :items="['dark', 'light', 'auto']"
-    />
-  </div>
+  <v-switch
+    :model-value="isDark"
+    color=""
+    hide-details
+    density="compact"
+    inset
+    style="opacity: 0.8"
+    @update:model-value="toggleDark"
+  />
 </template>
