@@ -15,6 +15,14 @@ export default defineNuxtConfig({
 
   ],
 
+  tailwindcss: {
+    config: {
+      theme: {
+        fontFamily: {},
+      },
+    },
+  },
+
   unocss: {
     icons: true,
   },
