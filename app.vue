@@ -19,31 +19,21 @@ useSeoMeta({
 </script>
 
 <template>
-  <UseColorMode v-slot="{ mode }">
-    <div class="max-w-[1450px] mx-auto px-4">
-      <theme-switch />
-      <VApp :theme="mode">
-        <NuxtLayout>
-          <NuxtPage />
-        </NuxtLayout>
-      </VApp>
-    </div>
-  </UseColorMode>
+  <div class="max-w-[1450px] mx-auto px-4">
+    <VApp>
+      <NuxtLayout>
+        <NuxtPage />
+      </NuxtLayout>
+    </VApp>
+  </div>
 </template>
 
 <style>
-body {
-  background-color: #fff;
-  color: rgba(0, 0, 0, 0.8);
-}
-
-.dark-mode body {
+html.dark {
   background-color: #091a28;
-  color: #ebf4f1;
 }
 
-.sepia-mode body {
+html.light {
   background-color: #f1e7d0;
-  color: #433422;
 }
 </style>

@@ -9,7 +9,7 @@ export default defineNuxtConfig({
     'nuxt-icon',
     '@pinia/nuxt',
     '@vueuse/nuxt',
-    '@nuxtjs/tailwindcss',
+    // '@nuxtjs/tailwindcss',
     'unplugin-fonts/nuxt',
     'vuetify-nuxt-module',
   ],
@@ -43,6 +43,16 @@ export default defineNuxtConfig({
       {
         from: 'vuetify',
         imports: ['useDisplay', 'useTheme'],
+      },
+
+      {
+        from: '@vueuse/core',
+        imports: ['useColorMode'],
+      },
+
+      {
+        from: '@vueuse/components',
+        imports: ['UseColorMode'],
       },
 
     ],

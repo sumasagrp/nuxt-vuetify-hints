@@ -6,7 +6,7 @@ const { smAndDown } = useDisplay()
   <div class="mt-9 flex flex-wrap gap-4">
     <VBtn
       :block="smAndDown"
-      class="rounded-xl border "
+      class="rounded-xl border"
       color="link"
       size="x-large"
       variant="outlined"
