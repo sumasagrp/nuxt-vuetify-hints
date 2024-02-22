@@ -12,8 +12,19 @@ export default defineNuxtConfig({
     '@nuxtjs/tailwindcss',
     'unplugin-fonts/nuxt',
     'vuetify-nuxt-module',
+    '@nuxtjs/color-mode',
 
   ],
+
+  colorMode: {
+    preference: 'system', // default value of $colorMode.preference
+    hid: 'nuxt-color-mode-script',
+    globalName: '__NUXT_COLOR_MODE__',
+    componentName: 'ColorScheme',
+    classPrefix: '',
+    classSuffix: '',
+    storageKey: 'nuxt-color-mode',
+  },
 
   unfonts: {
     custom: {
@@ -57,7 +68,6 @@ export default defineNuxtConfig({
 
   vite: {
 
-
     define: {
       'process.env.DEBUG': false,
     },
@@ -70,7 +80,7 @@ export default defineNuxtConfig({
 
   },
 
-  // sourcemap: false,
+  sourcemap: false,
 
   css: [
     'assets/vuetify/main.scss',
@@ -80,13 +90,13 @@ export default defineNuxtConfig({
 
   ],
 
-  // postcss: {
-  //   plugins: {
-  //     'tailwindcss/nesting': {},
-  //     'tailwindcss': {},
-  //     'autoprefixer': {},
-  //   },
-  // },
+  postcss: {
+    plugins: {
+      'tailwindcss/nesting': {},
+      'tailwindcss': {},
+      'autoprefixer': {},
+    },
+  },
 
   vuetify: {
 
@@ -107,7 +117,6 @@ export default defineNuxtConfig({
   features: {
     inlineStyles: false,
   },
-
 
   devtools: { enabled: false },
 

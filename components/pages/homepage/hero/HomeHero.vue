@@ -6,9 +6,7 @@
     avatar-height="650"
   >
     <div class="pa-md-5 h-full flex flex-col justify-center bg-greenx">
-      <client-only>
-        <theme-switch />
-      </client-only>
+      <theme-switch />
 
       <HomeMessageChip class="prevent-select" />
 

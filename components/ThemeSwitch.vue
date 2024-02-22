@@ -1,15 +1,23 @@
 <script setup>
-const { isDark, toggleDark } = useCustomTheme()
+const colorMode = useColorMode()
+const theme = useTheme()
+
+function setTheme() {
+  theme.global.name.value = colorMode.preference
+}
+
+onMounted(() => {
+  setTheme()
+})
 </script>
 
 <template>
-  <v-switch
-    :model-value="isDark"
-    color=""
-    hide-details
-    density="compact"
-    inset
-    style="opacity: 0.8"
-    @update:model-value="toggleDark"
-  />
+  <client-only>
+    {{ $colorMode }}
+    <VSelect
+      v-model="colorMode.preference"
+      :items="['dark', 'light', 'system']"
+      @update:model-value="setTheme()"
+    />
+  </client-only>
 </template>

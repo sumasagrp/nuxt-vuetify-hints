@@ -16,11 +16,19 @@ useSeoMeta({
   ogTitle: title,
   ogUrl: url,
 })
+
+const boot = ref(false)
+
+onMounted(() => {
+  setTimeout(() => {
+    boot.value = true
+  }, 200)
+})
 </script>
 
 <template>
   <div class="max-w-[1450px] mx-auto px-4">
-    <VApp>
+    <VApp v-show="boot">
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
@@ -30,10 +38,10 @@ useSeoMeta({
 
 <style>
 html.dark {
-  background-color: #091a28;
+  background-color: rgba(var(--v-theme-background)) !important;
 }
 
 html.light {
-  background-color: #f1e7d0;
+  background-color: rgba(var(--v-theme-background)) !important;
 }
 </style>

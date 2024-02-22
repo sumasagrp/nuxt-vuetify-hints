@@ -3,6 +3,7 @@ import defaultTheme from 'tailwindcss/defaultTheme'
 
 export default <Partial<Config>>{
   important: true,
+  darkMode: 'class',
 
   theme: {
     extend: {
