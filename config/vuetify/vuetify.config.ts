@@ -8,6 +8,10 @@ import {
 
 export default defineVuetifyConfiguration({
 
+  icons: {
+    defaultSet: 'unocss-mdi',
+  },
+
   theme: {
     themes,
   },

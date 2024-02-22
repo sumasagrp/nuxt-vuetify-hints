@@ -22,7 +22,7 @@ const { smAndDown } = useDisplay()
     >
       <div>
         Request early access
-        <Icon name="ic:baseline-chevron-right" />
+        <v-icon icon="i-mdi:chevron-right" />
       </div>
     </VBtn>
   </div>

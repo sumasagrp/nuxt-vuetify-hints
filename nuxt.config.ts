@@ -5,8 +5,7 @@ export default defineNuxtConfig({
   ssr: true,
 
   modules: [
-    // https://icones.js.org/
-    'nuxt-icon',
+    '@unocss/nuxt',
     '@pinia/nuxt',
     '@vueuse/nuxt',
     '@nuxtjs/tailwindcss',
