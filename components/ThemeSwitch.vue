@@ -1,23 +1,12 @@
 <script setup>
-const { colorMode } = useCustomTheme()
+const mode = useColorMode()
 </script>
 
 <template>
   <div>
-    <h1>Color mode: {{ colorMode.value }}</h1>
-    <select v-model="colorMode.preference">
-      <option value="system">
-        System
-      </option>
-      <option value="light">
-        Light
-      </option>
-      <option value="dark">
-        Dark
-      </option>
-      <option value="system">
-        Sepia
-      </option>
-    </select>
+    Color mode {{ mode }}
+    <VSelect
+      v-model="mode" :items="['dark', 'light', 'system']"
+    />
   </div>
 </template>

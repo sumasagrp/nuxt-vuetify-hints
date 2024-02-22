@@ -16,19 +16,19 @@ useSeoMeta({
   ogTitle: title,
   ogUrl: url,
 })
-
-const { colorMode } = useCustomTheme()
 </script>
 
 <template>
-  <div class="max-w-[1450px] mx-auto px-4">
-    <theme-switch />
-    <VApp :theme="colorMode.preference">
-      <NuxtLayout>
-        <NuxtPage />
-      </NuxtLayout>
-    </VApp>
-  </div>
+  <UseColorMode v-slot="{ mode }">
+    <div class="max-w-[1450px] mx-auto px-4">
+      <theme-switch />
+      <VApp :theme="mode">
+        <NuxtLayout>
+          <NuxtPage />
+        </NuxtLayout>
+      </VApp>
+    </div>
+  </UseColorMode>
 </template>
 
 <style>
@@ -36,10 +36,12 @@ body {
   background-color: #fff;
   color: rgba(0, 0, 0, 0.8);
 }
+
 .dark-mode body {
   background-color: #091a28;
   color: #ebf4f1;
 }
+
 .sepia-mode body {
   background-color: #f1e7d0;
   color: #433422;

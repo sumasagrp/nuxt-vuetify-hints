@@ -10,23 +10,9 @@ export default defineNuxtConfig({
     '@pinia/nuxt',
     '@vueuse/nuxt',
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/color-mode',
     'unplugin-fonts/nuxt',
     'vuetify-nuxt-module',
-    // 'nuxt-delay-hydration',
-
   ],
-
-  colorMode: {
-    preference: 'system', // default value of $colorMode.preference
-    fallback: '',
-    hid: 'nuxt-color-mode-script',
-    globalName: '__NUXT_COLOR_MODE__',
-    componentName: 'ColorScheme',
-    classPrefix: '',
-    classSuffix: '-mode',
-    storageKey: 'nuxt-color-mode',
-  },
 
   unfonts: {
     custom: {
@@ -39,23 +25,6 @@ export default defineNuxtConfig({
         },
       ],
     },
-  },
-
-  i18n: {
-    lazy: false,
-    langDir: 'locales',
-    strategy: 'prefix_except_default',
-    locales: [
-      {
-        code: 'en',
-        iso: 'en-US',
-        name: 'English',
-        file: 'en-US.json',
-      },
-    ],
-    defaultLocale: 'en',
-    vueI18n: 'config/i18n.config.ts',
-    detectBrowserLanguage: false,
   },
 
   pinia: {
@@ -128,24 +97,16 @@ export default defineNuxtConfig({
   },
 
   vuetify: {
-
     vuetifyOptions: 'config/vuetify/vuetify.config.ts',
-
     moduleOptions: {
 
       ssrClientHints: {
-
-        prefersColorSchemeOptions: {
-          useBrowserThemeOnly: false,
-        },
-
         viewportSize: true,
       },
 
       styles: {
         configFile: 'assets/vuetify/settings.scss',
       },
-
     },
   },
 
