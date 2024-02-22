@@ -69,6 +69,16 @@ export default defineNuxtConfig({
 
   vite: {
 
+    ssr: {
+      noExternal: ['vuetify'],
+    },
+
+    optimizeDeps: {
+      exclude: [
+        'vuetify',
+      ],
+    },
+
     define: {
       'process.env.DEBUG': false,
     },
