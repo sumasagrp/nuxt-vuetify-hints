@@ -7,6 +7,7 @@ export default <Partial<Config>>{
 
   theme: {
     borderWidth: {},
+    fontFamily: {},
 
     extend: {
       colors: {
