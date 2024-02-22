@@ -23,6 +23,7 @@ onMounted(() => {
   <client-only>
     <VSelect
       v-model="colorMode.preference"
+      mandatory
       :items="['dark', 'light', 'system']"
       @update:model-value="setTheme"
     />
