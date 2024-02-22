@@ -8,12 +8,18 @@ function setTheme() {
   })
 }
 
+watch(() => colorMode.value, (newValue) => {
+  if (newValue)
+    setTheme()
+})
+
 onMounted(() => {
   setTheme()
 })
 </script>
 
 <template>
+  {{ colorMode.value }}
   <client-only>
     <VSelect
       v-model="colorMode.preference"
