@@ -1,11 +1,24 @@
 
 @forward 'vuetify/settings' with (
 
+$utilities: (
+    "margin-bottom": false,
+    "margin-end": false,
+    "margin-left": false,
+    "margin-right": false,
+    "margin-start": false,
+    "margin-top": false,
+    "margin-x": false,
+    "margin-y": false,
+    "margin": false,
+  ),
+
+
  // 👉 Transitions
- $main-transition: 0s,
- $navigation-drawer-transition-duration: 0s,
- $app-bar-transition: 0s,
- $toolbar-transition: 0s,
+//  $main-transition: 0s,
+//  $navigation-drawer-transition-duration: 0s,
+//  $app-bar-transition: 0s,
+//  $toolbar-transition: 0s,
 
  // Tabs
  $tab-slider-size: 2px,

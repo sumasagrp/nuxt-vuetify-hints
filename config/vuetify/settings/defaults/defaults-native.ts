@@ -1,6 +1,11 @@
 export default {
   // Native Vuetify Components
 
+  VMain: {
+    // fixes problem with VMain rendering under the appbar on SSR
+    style: 'padding-top: 90px',
+  },
+
   VAppBar: {
     flat: true,
     density: 'comfortable',

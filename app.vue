@@ -30,10 +30,11 @@ onMounted(() => {
   <VApp :class="boot ? 'opacity-100' : 'opacity-0'">
     <GAppBar />
     <NuxtLayout>
-      <div class="max-w-[1475px] mx-auto px-3 mt-2">
+      <div class="max-w-[1475px] mx-auto px-3">
         <NuxtPage />
       </div>
     </NuxtLayout>
+    <TheFooter />
   </VApp>
 </template>
 

@@ -86,18 +86,18 @@ defineProps({
         :class="`lg:w-1/2  ${order === 'left' ? 'order-last lg:order-last' : `${noGutters && 'pr-3'} `}`"
         :style="{ ... rightColumnStyle, leftColumnStyle }"
       >
-        <div
+        <!-- <div
           v-if="$slots.content"
           :class="`h-full ${order === 'left' ? 'border-l' : 'border-r'}` " class="border flex flex-col align-center justify-center "
         >
           <slot name="content" />
-        </div>
+        </div> -->
 
         <div v-if="$slots.avatar" :style="{ height: `${avatarHeight}px` }">
           <slot name="avatar" />
         </div>
 
-        <VImg v-if="!$slots.content && !$slots.avatar && !hideColumn" :class="`bg-background ${order === 'left' ? 'border-l' : 'border-r'}` " :src="avatar" cover height="100%">
+        <VImg v-if="!$slots.content && !$slots.avatar && !hideColumn" :class="`bg-background ${order === 'left' ? 'border-s' : 'border-e'}` " :src="avatar" cover height="100%">
           <template #placeholder>
             <div class="flex h-full items-center justify-center">
               <VProgressCircular color="primary" indeterminate />

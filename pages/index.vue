@@ -1,6 +1,7 @@
 <template>
-  <div>
+  <div class="flex flex-col gap-4">
     <HomeHero />
+    <HomeJobsSearch />
   </div>
 </template>
 

@@ -57,6 +57,11 @@ export default defineNuxtConfig({
 
     presets: [
       {
+        from: 'lodash-es',
+        imports: ['cloneDeep', 'isEqual', 'isArray', 'isObject', 'isEmpty', 'isFunction', 'omit'],
+      },
+
+      {
         from: 'vuetify',
         imports: ['useDisplay', 'useTheme'],
       },

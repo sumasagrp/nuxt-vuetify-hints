@@ -1,12 +1,7 @@
-<script setup>
-const { isLoggedIn } = toRefs(useAuthStore())
-const { isSecureLayout, isWelcomeScreen } = toRefs(useRoutingStore())
-</script>
-
 <template>
   <div>
     <div class="lg:flex hidden align-center ">
-      <div v-if="!isWelcomeScreen && !isSecureLayout" class="gap-4 flex">
+      <div class="gap-4 flex">
         <VBtn
           :active="false"
           class="border-0 no-gutters"
@@ -44,7 +39,7 @@ const { isSecureLayout, isWelcomeScreen } = toRefs(useRoutingStore())
 
       <VDivider class="mx-3" vertical />
 
-      <div v-if="!isLoggedIn" class="gap-3 flex">
+      <div class="gap-3 flex">
         <VBtn class="rounded-xl border-0" color="link" size="large" to="/auth" variant="plain">
           Sign In
         </VBtn>
@@ -58,15 +53,15 @@ const { isSecureLayout, isWelcomeScreen } = toRefs(useRoutingStore())
         >
           <div class=" flex align-center">
             Get started
-            <VIcon class="ml-1" end icon="$mdiArrowRight" size="17" />
+            <VIcon class="ml-1" end icon="i-mdi:arrow-right" size="17" />
           </div>
         </VBtn>
       </div>
 
-      <template v-else>
+      <!-- <template v-else>
         <GAppBarNotifications />
         <GAppBarProfileMenu />
-      </template>
+      </template> -->
     </div>
   </div>
 </template>

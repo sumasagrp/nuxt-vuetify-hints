@@ -6,6 +6,8 @@ export default <Partial<Config>>{
   darkMode: 'class',
 
   theme: {
+    borderWidth: {},
+
     extend: {
       colors: {
         'app-background': '#191a23',

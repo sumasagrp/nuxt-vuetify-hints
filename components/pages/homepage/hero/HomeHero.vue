@@ -6,8 +6,6 @@
     avatar-height="650"
   >
     <div class="pa-md-5 h-full flex flex-col justify-center bg-greenx">
-      <theme-switch />
-
       <HomeMessageChip class="prevent-select" />
 
       <p class="search-apply-connect text-5xl lg:text-6xl sm:w-8/12 lg:w-auto  font-bold mb-5">
