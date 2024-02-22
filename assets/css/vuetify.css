@@ -27,3 +27,127 @@ h6,
 }
 
 
+.autocomplete-list-bg-color .v-list {
+  background: rgba(var(--v-theme-select-background)) !important ;
+  /* background:  !important; */
+  padding: 0;
+  border: solid 1px rgba(var(--v-border-color), var(--v-border-opacity));
+}
+
+.v-input--density-compact {
+  --v-input-control-height: 25px !important;
+}
+
+.v-field {
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
+
+.v-btn {
+  transition-property: transform;
+  transition-duration: 0.2s;
+  transition: all 0.2s ease-in-out;
+}
+
+.v-btn:active:not(.no-transition) {
+  transform: translateY(1.2px);
+}
+
+.v-input__details {
+  margin-top: -5px;
+}
+
+.v-field__outline {
+  color: rgba(var(--v-field-outline));
+}
+
+.v-label.v-field-label {
+  color: rgba(var(--v-field-label));
+}
+
+/* Ths fixes a strange white underline in text fields while using tailwind */
+.v-field--variant-outlined .v-field__outline__notch {
+  border-width: 0 0 0px !important;
+}
+
+.v-list-item__overlay {
+  transition: opacity 0s !important ;
+  transition-duration: 0s !important;
+  transition-delay: 0s !important;
+  transition-property: unset !important;
+}
+
+/* Apply styles to elements with class "v-expansion-panel-title__overlay" that are descendants
+   of elements with class "search-filters". This ensures the specified background color
+   is set for these elements within the context of "search-filters". */
+.search-filters .v-expansion-panel-title__overlay {
+  background-color: transparent !important;
+}
+
+.v-skeleton-loader .v-skeleton-loader__avatar,
+.v-skeleton-loader .v-skeleton-loader__button,
+.v-skeleton-loader .v-skeleton-loader__chip,
+.v-skeleton-loader .v-skeleton-loader__divider,
+.v-skeleton-loader .v-skeleton-loader__heading,
+.v-skeleton-loader .v-skeleton-loader__image,
+.v-skeleton-loader .v-skeleton-loader__text {
+  background: rgba(var(--v-theme-on-surface), var(--v-border-opacity-skeleton)) !important;
+}
+
+/* .v-skeleton-loader__avatar {
+  border-radius: 0% !important;
+} */
+
+.no-gutters.v-btn {
+  padding: 0 5px !important;
+}
+
+.custom .v-switch__track {
+  outline: solid rgb(var(--v-theme-surface-variant), 0.3);
+  background-color: rgb(var(--v-theme-surface-variant), 0.2);
+  height: 26px;
+}
+
+/** this is for the appbar margin to be consistent with the containerWidth
+/** during responsive size changes */
+#app :is(.px-4) {
+  padding-left: 32px !important;
+  padding-right: 32px !important;
+}
+
+.v-main--scrollable > .v-main__scroller {
+  overflow-x: hidden !important;
+}
+
+.v-main--scrollable {
+  margin-top: 16px !important;
+}
+
+
+.no-gutters.v-list-item {
+  padding-inline: 0px !important;
+}
+
+.card-color {
+  background: rgba(var(--v-theme-surface)) !important;
+}
+
+.card-color:hover {
+  background: rgba(var(--v-theme-surface-hover)) !important;
+}
+
+.v-otp-input__content {
+  max-width: 648px!important;
+  font-size: 400px!important;
+}
+
+@media (max-width: 600px) {
+  .v-otp-input__content {
+    max-height: 70px;
+  }
+}
+
+.v-otp-input__field {
+  font-size: 2rem!important;
+}
+

@@ -1,6 +1,6 @@
 <script setup>
-const colorMode = useColorMode()
 const theme = useTheme()
+const colorMode = useColorMode()
 
 function setTheme() {
   nextTick(() => {
@@ -8,8 +8,8 @@ function setTheme() {
   })
 }
 
-watch(() => colorMode.value, (newValue) => {
-  if (newValue)
+watch(() => colorMode.value, (theme) => {
+  if (theme)
     setTheme()
 })
 
@@ -23,8 +23,6 @@ onMounted(() => {
   <client-only>
     <VSelect
       v-model="colorMode.preference"
-      eager
-      mandatory
       :items="['dark', 'light', 'system']"
       @update:model-value="setTheme"
     />
