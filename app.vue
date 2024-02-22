@@ -22,13 +22,13 @@ const boot = ref(false)
 onMounted(() => {
   setTimeout(() => {
     boot.value = true
-  }, 250)
+  }, 300)
 })
 </script>
 
 <template>
   <div class="max-w-[1450px] mx-auto px-4">
-    <VApp v-show="boot">
+    <VApp :class="boot ? 'opacity-100' : 'opacity-0'">
       <NuxtLayout>
         <NuxtPage />
       </NuxtLayout>
