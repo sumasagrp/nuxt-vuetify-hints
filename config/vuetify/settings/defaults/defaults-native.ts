@@ -1,9 +1,13 @@
 export default {
   // Native Vuetify Components
 
-  VMain: {
-    // fixes problem with VMain rendering under the appbar on SSR
-    style: 'padding-top: 90px',
+  VAppBar: {
+    flat: true,
+    density: 'comfortable',
+    color: 'transparent',
+    VBtn: {
+      ripple: false,
+    },
   },
 
   VRow: {
@@ -30,15 +34,6 @@ export default {
     elevation: 0,
     ripple: false,
     class: 'rounded-lg',
-  },
-
-  VAppBar: {
-    flat: true,
-    density: 'comfortable',
-    color: 'appbar-background',
-    VBtn: {
-      ripple: false,
-    },
   },
 
   VTextField: {

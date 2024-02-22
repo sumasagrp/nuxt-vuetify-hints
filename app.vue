@@ -27,13 +27,14 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="max-w-[1450px] mx-auto px-4">
-    <VApp :class="boot ? 'opacity-100' : 'opacity-0'">
-      <NuxtLayout>
+  <VApp :class="boot ? 'opacity-100' : 'opacity-0'">
+    <GAppBar />
+    <NuxtLayout>
+      <div class="max-w-[1475px] mx-auto px-3 mt-2">
         <NuxtPage />
-      </NuxtLayout>
-    </VApp>
-  </div>
+      </div>
+    </NuxtLayout>
+  </VApp>
 </template>
 
 <style>
