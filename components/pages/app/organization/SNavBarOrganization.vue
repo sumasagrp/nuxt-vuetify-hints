@@ -32,7 +32,7 @@ const sidebarSettings = [
   },
   {
     title: 'Organization',
-    route: '/app/org/organization/profile',
+    route: '/app/org/profile',
     icon: 'i-mdi:lightning-bolt-outline',
   },
 
@@ -86,7 +86,7 @@ const sidebarSettings = [
     <!-- * [ Settings ] -->
     <VListItem
       v-for="link in sidebarSettings" :key="link.id" :disabled="link.disabled" :ripple="false"
-      :title="link.title" :to="link.route" exact link rounded="md"
+      :title="link.title" :to="link.route" exact link rounded="lg"
     >
       <template #prepend="{ isActive }">
         <VIcon :color="isActive && 'primary'" :icon="link.icon" end />

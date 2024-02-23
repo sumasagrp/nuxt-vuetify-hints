@@ -9,7 +9,6 @@ export default {
 
   VAppBar: {
     flat: true,
-    density: 'comfortable',
     color: 'transparent',
     VBtn: {
       ripple: false,
@@ -68,7 +67,7 @@ export default {
   VAutocomplete: {
     // autoSelectFirst: true,
     hideDetails: false,
-    density: 'comfortable',
+    density: 'compact',
     variant: 'outlined',
     color: 'field-outline-focus',
     bgColor: 'text-field-background',
@@ -83,7 +82,7 @@ export default {
   VSelect: {
     autoSelectFirst: true,
     hideDetails: false,
-    density: 'comfortable',
+    density: 'compact',
     variant: 'outlined',
     color: 'field-outline-focus',
     bgColor: 'text-field-background',
