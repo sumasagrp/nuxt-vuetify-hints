@@ -3,13 +3,15 @@ definePageMeta({
   name: 'Auth-Signup',
 })
 
-const description = 'Sign up and join the gang!'
+const title = 'Skriptjobs™ – Join the gang today!'
 
 useSeoMeta({
+  title,
   description,
   ogDescription: description,
-  twitterCard: 'summary',
+  twitterTitle: title,
   twitterDescription: description,
+  ogTitle: title,
 })
 
 // Create the configuration for the sign-up form elements.
