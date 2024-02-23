@@ -46,7 +46,7 @@
         <SettingsButton
           color="black-button"
           size="large"
-          to="/auth/signup"
+          to="/app"
           variant="flat"
           light
         >

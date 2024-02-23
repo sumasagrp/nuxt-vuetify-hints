@@ -35,6 +35,10 @@ export default {
     border: false,
   },
 
+  VSheet: {
+    style: 'z-index:1!important;',
+  },
+
   VCard: {
     border: true,
     elevation: 0,

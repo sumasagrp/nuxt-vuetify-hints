@@ -141,6 +141,8 @@ export default defineNuxtConfig({
 
   experimental: {
     typedPages: true,
+    renderJsonPayloads: false,
+
   },
 
   devtools: { enabled: false },
