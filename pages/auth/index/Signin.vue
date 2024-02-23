@@ -3,6 +3,15 @@ definePageMeta({
   name: 'Auth-Signin',
 })
 
+const description = 'Sigin to to Skriptjôbs™ and get started!'
+
+useSeoMeta({
+  description,
+  ogDescription: description,
+  twitterCard: 'summary',
+  twitterDescription: description,
+})
+
 // Create the configuration for the sign-in form elements.
 const {
   validated,

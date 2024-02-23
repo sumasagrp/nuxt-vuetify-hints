@@ -3,6 +3,15 @@ definePageMeta({
   name: 'Auth-Signup',
 })
 
+const description = 'Sign up and join the gang!'
+
+useSeoMeta({
+  description,
+  ogDescription: description,
+  twitterCard: 'summary',
+  twitterDescription: description,
+})
+
 // Create the configuration for the sign-up form elements.
 const {
   validated,
