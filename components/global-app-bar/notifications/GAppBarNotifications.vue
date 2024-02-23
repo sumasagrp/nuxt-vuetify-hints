@@ -1,4 +1,4 @@
-<script setup lang="ts">
+<script setup>
 const { profile } = toRefs(useUserProfileStore())
 
 const { lgAndUp } = useDisplay()
@@ -79,8 +79,8 @@ const notifications = [
 </script>
 
 <template>
-  <VMenu v-if="profile && lgAndUp" :close-on-content-click="false" class="border" offset="24 95" scrim="#000>
-    <template #activator="{ props }>
+  <VMenu v-if="profile && lgAndUp" :close-on-content-click="false" class="border" offset="24 95" scrim="#000">
+    <template #activator="{ props }">
       <VBadge
         bordered
         class="mx-5 prevent-select"
@@ -93,15 +93,15 @@ const notifications = [
       </VBadge>
     </template>
 
-    <VCard elevation="10>
+    <VCard elevation="10">
       <VContainer>
-        <div class="flex gap-2>
-          <div class="text-h6 font-bold>
+        <div class="flex gap-2">
+          <div class="text-h6 font-bold">
             Notifications
           </div>
           <VSpacer />
 
-          <SettingsButton class="mr-1>
+          <SettingsButton class="mr-1">
             Mark all as read
           </SettingsButton>
 
@@ -116,63 +116,63 @@ const notifications = [
 
       <VDivider />
 
-      <VTabs class="border-b" color="link>
-        <VTab :ripple="false>
-          All <VChip class="ml-2" size="x-small>
+      <VTabs class="border-b" color="link">
+        <VTab :ripple="false">
+          All <VChip class="ml-2" size="x-small">
             33
           </VChip>
         </VTab>
-        <VTab :ripple="false>
+        <VTab :ripple="false">
           Unread
-          <VChip class="ml-2" size="x-small>
+          <VChip class="ml-2" size="x-small">
             0
           </VChip>
         </VTab>
       </VTabs>
 
-      <VSheet class="flex flex-col h-fullx overflow-auto" height="483" min-width="710>
+      <VSheet class="flex flex-col h-fullx overflow-auto" height="483" min-width="710">
         <GAppBarNotificationsEmpty v-if="!notifications.length" />
 
         <template v-else>
-          <div v-for="item in notifications" :key="item.id>
-            <div class="flex w-100 pa-4>
-              <div class="pr-5x>
+          <div v-for="item in notifications" :key="item.id">
+            <div class="flex w-100 pa-4">
+              <div class="pr-5x">
                 <RoundedSquareAvatar :src="item.avatar" />
               </div>
 
-              <div class="px-8 flex flex-col w-100 >
+              <div class="px-8 flex flex-col w-100 ">
                 <div>
-                  <span class="text-link font-bold>{{ item.user }} </span> <span class="text-body-2>  {{ item.action }} </span> <span class="text-link font-bold>{{ item.target }}</span>
+                  <span class="text-link font-bold">{{ item.user }} </span> <span class="text-body-2">  {{ item.action }} </span> <span class="text-link font-bold">{{ item.target }}</span>
                 </div>
 
                 <small>5 minutes ago</small>
 
-                <div v-if="item.actionButtons" class="flex mt-2>
-                  <SettingsButton class="mr-1" size="small>
+                <div v-if="item.actionButtons" class="flex mt-2">
+                  <SettingsButton class="mr-1" size="small">
                     <VIcon start>
                       $mdiThumbUpOutline
                     </VIcon>  Accept
                   </SettingsButton>
-                  <SettingsButton color="accent-button" size="small>
+                  <SettingsButton color="accent-button" size="small">
                     <VIcon start>
                       $mdiThumbDownOutline
                     </VIcon>
                     Decline
                   </SettingsButton>
                 </div>
-                <div v-if="item.isApplication" class="flex mt-3 gap-2>
-                  <SettingsButton class="roudeed-lg" size="small>
+                <div v-if="item.isApplication" class="flex mt-3 gap-2">
+                  <SettingsButton class="roudeed-lg" size="small">
                     Review applicaiton
                   </SettingsButton>
                 </div>
               </div>
 
-              <div class="flex>
-                <SettingsButton v-if="!item.actionButtons" class="rounded-lg mr-2" color="link" icon size="small" variant="text>
+              <div class="flex">
+                <SettingsButton v-if="!item.actionButtons" class="rounded-lg mr-2" color="link" icon size="small" variant="text">
                   <VIcon icon="$mdiThumbUpOutline" size="large" />
                 </SettingsButton>
 
-                <!-- <SettingsButton class="rounded-lg mr-2" color="link" icon size="small" variant="text>
+                <!-- <SettingsButton class="rounded-lg mr-2" color="link" icon size="small" variant="text">
                   <VIcon icon="$mdiDotsHorizontal" size="large" />
                   </SettingsButton> -->
               </div>

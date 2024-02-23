@@ -1,6 +1,5 @@
 <template>
-  <NuxtLink
-    class="flex" to="/>
+  <NuxtLink class="flex" to="/">
     <SkriptjobsLogo />
   </NuxtLink>
 </template>

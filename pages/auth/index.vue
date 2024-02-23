@@ -28,8 +28,7 @@ const title = computedEager(() => {
       :class="[]"
       class="pt-5 rounded-lg pa-8"
     >
-      <VCardTitle
-        class="text-h5x font-weight-bold mt-5 mb-8 ml-1>
+      <VCardTitle class="text-h5x font-weight-bold mt-5 mb-8 ml-1">
         {{ title }}
       </VCardTitle>
 

@@ -20,35 +20,32 @@ const links = [
 </script>
 
 <template>
-  <div
-    class="flex flex-column text-subtitle-2 mx-5>
-    <div class="flex
-  >
-    {{ footerAccountText }}
+  <div class="flex flex-column text-subtitle-2 mx-5">
+    <div class="flex">
+      {{ footerAccountText }}
 
-    <template
-      v-for="{ name, to, condition } in formType"
-      :key="name"
-    >
-      <NuxtLink
-        v-if="condition"
-        :to="to"
-        class="ml-2 ignore-a-style text-link"
+      <template
+        v-for="{ name, to, condition } in formType"
+        :key="name"
       >
-        {{ name }}
-      </NuxtLink>
-    </template>
-  </div>
+        <NuxtLink
+          v-if="condition"
+          :to="to"
+          class="ml-2 ignore-a-style text-link"
+        >
+          {{ name }}
+        </NuxtLink>
+      </template>
+    </div>
 
-  <div
-    :key="name"class="flex gap-3 mt-2>
+    <div class="flex gap-3 mt-2">
       <NuxtLink
-        v-for=" { name, to } in
-    links"
-    :to="to"
-  >
-    <span>{{ name }}</span>
-    </NuxtLink>
-  </div>
+        v-for="{ name, to } in links"
+        :key="name"
+        :to="to"
+      >
+        <span>{{ name }}</span>
+      </NuxtLink>
+    </div>
   </div>
 </template>
