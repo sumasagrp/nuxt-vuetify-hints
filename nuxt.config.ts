@@ -53,7 +53,7 @@ export default defineNuxtConfig({
 
   imports: {
     injectAtEnd: true,
-    dirs: ['stores', 'scripts/**/*.{ts,js}'],
+    dirs: ['stores', 'scripts/**/*.{ts,js}', 'data/**/*.{ts,js}'],
 
     presets: [
       {

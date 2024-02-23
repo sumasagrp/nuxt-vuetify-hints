@@ -62,6 +62,12 @@ export const colors = {
     dark: '#191a23',
     light: '#f5f7fa',
   },
+
+  'on-background': {
+    dark: '#adbac7',
+    light: '#2e3134',
+  },
+
   'on-surface': {
     dark: '#adbac7',
     light: '#2e3134',

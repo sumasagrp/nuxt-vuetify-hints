@@ -21,7 +21,9 @@ h6,
 .text-lg,
 .text-body-2,
 .text-subtitle-1,
-.text-subtitle-2
+.text-subtitle-2,
+.v-list-item--variant-text,
+.v-label
  {
   color: rgba(var(--v-theme-on-surface)) !important;
 }

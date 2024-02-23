@@ -1,13 +1,13 @@
 <script setup lang="ts">
 const route = useRoute()
 const hideAppBar = computedEager(() => !route.meta.hideAppBar)
-// const isNotEmptyAppBar = computedEager(() => !route.meta.emptyAppBar)
+const disableHideOnScroll = computedEager(() => route.meta.disableHideOnScroll)
 </script>
 
 <template>
   <VAppBar
     v-if="hideAppBar"
-    scroll-behavior="hide"
+    :scroll-behavior="disableHideOnScroll ? undefined : 'hide'"
     :height="90"
     class=" px-3"
   >

@@ -43,8 +43,7 @@
           Sign In
         </VBtn>
 
-        <VBtn
-          class="rounded-xl border"
+        <SettingsButton
           color="black-button"
           size="large"
           to="/auth/signup"
@@ -54,7 +53,7 @@
             Get started
             <VIcon class="ml-1" end icon="i-mdi:arrow-right" size="17" />
           </div>
-        </VBtn>
+        </SettingsButton>
       </div>
 
       <!-- <template v-else>
