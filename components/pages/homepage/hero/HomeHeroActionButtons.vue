@@ -1,9 +1,9 @@
-<script setup>
+<script setup lang="ts">
 const { smAndDown } = useDisplay()
 </script>
 
 <template>
-  <div class="mt-9 flex flex-wrap gap-4">
+  <div class="mt-9 flex flex-wrap gap-4>
     <VBtn
       :block="smAndDown"
       class="rounded-xl border"

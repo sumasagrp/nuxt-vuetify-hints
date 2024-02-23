@@ -21,19 +21,20 @@ const buttons = computed(() => {
 <template>
   <LoginOrDivider class="mt-4" />
 
-  <div class="text-center">
+  <div
+    :key="button.name"class="text-center>
     <VBtn
-      v-for="button in buttons"
-      :key="button.name"
-      :color="button.color"
-      :disabled="button.disabled"
-      :loading="button.loading"
-      class="mx-1 my-3 mask mask-hexagon"
-      icon
-      variant="tonal"
-      @click="button.action();formRef.resetValidation()"
-    >
-      <VIcon :icon="button.icon" />
+      v-for=" button in
+    buttons"
+    :color="button.color"
+    :disabled="button.disabled"
+    :loading="button.loading"
+    class="mx-1 my-3 mask mask-hexagon"
+    icon
+    variant="tonal"
+    @click="button.action();formRef.resetValidation()"
+  >
+    <VIcon :icon="button.icon" />
     </VBtn>
   </div>
 </template>

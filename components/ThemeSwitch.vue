@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const theme = useTheme()
 const colorMode = useColorMode()
 
@@ -34,16 +34,18 @@ const selectedModeIndex = computed({
 
 <template>
   <client-only>
-    <VBtnToggle v-model="selectedModeIndex" class="pa-1" variant="text">
+    <VBtnToggle
+      v-model="selectedModeIndex" class="pa-1" variant="text>
       <VBtn
         v-for="(btn, i) in themeButtons"
-        :key="i"
-        :icon="btn.icon"
-        class="mr-1 mask mask-hexagon"
-        rounded="lg"
-        size="small"
-      >
-        <VIcon size="x-small">
+      :key="i"
+      :icon="btn.icon"
+      class="mr-1 mask mask-hexagon"
+      rounded="lg"
+      size="small"
+    >
+      <VIcon
+        size="x-small>
           {{ btn.icon }}
         </VIcon>
       </VBtn>

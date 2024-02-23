@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 defineProps({
   text: {
     type: String,
@@ -8,7 +8,8 @@ defineProps({
 </script>
 
 <template>
-  <VBtn block class="rounded-xl border" size="large" type="submit">
+  <VBtn
+    block class="rounded-xl border" size="large" type="submit>
     <div>
       {{ text }}
     </div>

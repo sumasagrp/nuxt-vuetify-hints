@@ -1,4 +1,4 @@
-<script setup>
+<script setup lang="ts">
 const password = defineModel()
 const isPasswordVisible = ref(false)
 const togglePasswordVisibility = useToggle(isPasswordVisible)
