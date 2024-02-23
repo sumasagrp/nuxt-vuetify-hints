@@ -1,4 +1,5 @@
-export const useSearchStore = defineStore('local-search', {
+export const useJobStore = defineStore('local-search', {
+
   persist: {
     paths: ['selectedJobTypes', 'selectedLocationType', 'selectedSeniorityType'],
   },

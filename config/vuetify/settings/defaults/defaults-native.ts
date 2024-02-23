@@ -44,7 +44,7 @@ export default {
 
   VTextField: {
     hideDetails: false,
-    density: 'comfortable',
+    density: 'compact',
     variant: 'outlined',
     color: 'field-outline-focus',
     bgColor: 'text-field-background',
@@ -53,7 +53,7 @@ export default {
 
   VCombobox: {
     hideDetails: false,
-    density: 'comfortable',
+    density: 'compact',
     variant: 'outlined',
     color: 'field-outline-focus',
     bgColor: 'text-field-background',

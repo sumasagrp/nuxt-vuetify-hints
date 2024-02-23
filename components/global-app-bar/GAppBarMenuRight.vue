@@ -7,7 +7,7 @@
           class="border-0 no-gutters"
           color="appbar-buttons"
           size="large"
-          to="/search"
+          to="/jobs"
           variant="plain"
         >
           Find Jobs
@@ -48,6 +48,7 @@
           size="large"
           to="/auth/signup"
           variant="flat"
+          light
         >
           <div class=" flex align-center">
             Get started

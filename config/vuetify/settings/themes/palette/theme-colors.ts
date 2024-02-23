@@ -25,7 +25,7 @@ export const colors = {
   'background': {
     dark: '#191a23',
     // light: '#f5f7fa'
-    light: '#f8fafc',
+    light: '#fafafa',
   },
   'link': {
     dark: '#9499ff',

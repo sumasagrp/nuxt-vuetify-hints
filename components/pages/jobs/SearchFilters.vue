@@ -3,7 +3,7 @@ import jobTypes from '@/data/job-types'
 import locationTypes from '@/data/location-types'
 import seniorityTypes from '@/data/job-experience'
 
-const { selectedJobTypes, selectedSeniorityType, selectedLocationType } = toRefs(useSearchStore())
+const { selectedJobTypes, selectedSeniorityType, selectedLocationType } = toRefs(useJobStore())
 const filterPanel = ref(0)
 </script>
 
