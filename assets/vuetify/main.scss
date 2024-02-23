@@ -1,2 +1,3 @@
-
-@use 'vuetify'
+@use 'vuetify' with ($reset: false,
+    $color-pack: false,
+);

@@ -3,7 +3,7 @@ definePageMeta({
   name: 'Auth-Signup',
 })
 
-const title = 'Skriptjobs™ – Join hundreds of companies looking for talent like yours!'
+const title = 'Skriptjobs™ – Join and start applying for jobs 🚀'
 
 useSeoMeta({
   title,
