@@ -39,10 +39,7 @@ onMounted(() => {
 </template>
 
 <style>
-html.dark {
-  background-color: rgba(var(--v-theme-background)) !important;
-}
-
+html.dark,
 html.light {
   background-color: rgba(var(--v-theme-background)) !important;
 }

@@ -15,12 +15,10 @@ const title = computedEager(() => {
 </script>
 
 <template>
-  <!--  hiding this page during the login process creates a smoother transition during routing.   -->
-
   <div
     v-show="!isLoggedIn"
     :class="{ disabled: loading || loadingGoogle }"
-    class="gap-7 flex flex-column py-10 px-3  mx-auto justify-center max-w-[545px]"
+    class="gap-7 flex flex-column py-10x px-3 mx-auto justify-center max-w-[545px]"
   >
     <GAppBarLogo />
 

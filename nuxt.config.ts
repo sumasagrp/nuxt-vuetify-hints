@@ -114,7 +114,10 @@ export default defineNuxtConfig({
 
   },
 
-  sourcemap: false,
+  sourcemap: {
+    server: false,
+    client: false,
+  },
 
   css: [
     'assets/vuetify/main.scss',
@@ -150,6 +153,10 @@ export default defineNuxtConfig({
 
   features: {
     inlineStyles: false,
+  },
+
+  experimental: {
+    typedPages: true,
   },
 
   devtools: { enabled: false },
