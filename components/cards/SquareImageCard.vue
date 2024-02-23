@@ -109,7 +109,7 @@ defineProps({
       <div
         :class="`w-full xl:w-1/2
        ${order === 'right' ? 'order-last lg:order-last' : ''}
-       ${dense ? '' : ' pa-15x'}`
+       ${dense ? '' : ' p-15x'}`
         "
       >
         <div v-if="!$slots.content && !$slots.default" class="flex flex-col h-full gap-7">

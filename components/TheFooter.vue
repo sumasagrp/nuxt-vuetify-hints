@@ -46,7 +46,7 @@ const columns = [
 <template>
   <div v-show="!hideFooter" class="mb-12 mt-n1 ">
     <VFooter>
-      <VSheet :width="1475" class="bg-redx mx-auto bg-background pa-5">
+      <VSheet :width="1475" class="bg-redx mx-auto bg-background p-5">
         <div class="lg:flex md:justify-between">
           <!-- ** Skriptjobs logo  -->
           <div class="mb-10 md:mb-5 prevent-select md:w-8/12 lg:w-4/12 text-lg mr-7">

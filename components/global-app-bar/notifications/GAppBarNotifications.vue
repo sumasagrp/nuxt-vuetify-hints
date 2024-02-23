@@ -135,7 +135,7 @@ const notifications = [
 
         <template v-else>
           <div v-for="item in notifications" :key="item.id">
-            <div class="flex w-100 pa-4">
+            <div class="flex w-100 p-4">
               <div class="pr-5x">
                 <RoundedSquareAvatar :src="item.avatar" />
               </div>

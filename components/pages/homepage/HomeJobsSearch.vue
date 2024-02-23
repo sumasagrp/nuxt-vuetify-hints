@@ -6,7 +6,7 @@ const popular = ['marketing', 'design', 'developer', 'sales', 'product manager',
 <template>
   <div>
     <SquareImageCard :hide-column="!lgAndUp" avatar="/media/job-search.png" order="right">
-      <div class=" mt-5 pa-md-10">
+      <div class=" mt-5 p-md-10">
         <p class="search-apply-connect text-5xl lg:text-6xl sm:w-8/12 lg:w-auto h-fullx mb-5">
           Start your search for that
           <span class="text-link">perfect </span>job!
