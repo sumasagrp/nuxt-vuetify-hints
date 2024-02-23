@@ -34,7 +34,7 @@ definePageMeta({
 
   <div class="h-full grid grid-cols-12 gap-3 pt-5">
     <div class="col-span-3">
-      <div class="sticky top-20">
+      <div class="sticky top-24">
         <SNavBarOrganization />
       </div>
     </div>
@@ -43,13 +43,7 @@ definePageMeta({
       <v-sheet height="80" color="background" class="sticky top-20 align-center">
         <div class="flex flex-col h-100 w-100 align-center justify-center">
           <div class="w-100 flex align-center  bg-greenx">
-            <VTextField
-              placeholder="Search by title, company or just free text"
-              autofocus
-              hide-details
-              class="mr-2"
-              prepend-inner-icon="i-mdi:magnify"
-            />
+            <v-spacer />
 
             <SettingsButton class="mr-1" height="40">
               Search
@@ -78,7 +72,7 @@ definePageMeta({
         </div>
       </v-sheet>
 
-      <div style="z-index:0!important">
+      <div>
         <NuxtPage />
       </div>
     </div>

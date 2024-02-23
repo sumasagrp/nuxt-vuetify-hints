@@ -8,7 +8,7 @@ defineProps({
 </script>
 
 <template>
-  <VBtn block class="rounded-xl border" size="large" type="submit">
+  <VBtn block class="rounded-lg border" size="large" type="submit">
     <div>
       {{ text }}
     </div>

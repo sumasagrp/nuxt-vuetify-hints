@@ -61,7 +61,8 @@ const sidebarSettings = [
       </template>
     </VListItem>
 
-    <VDivider class="my-2" />
+    <div class="my-5" />
+    <!-- <VDivider class="my-2" /> -->
 
     <VListSubheader class="text-overline">
       Engagement
@@ -78,7 +79,9 @@ const sidebarSettings = [
       </template>
     </VListItem>
 
-    <VDivider class="my-2" />
+    <div class="my-5" />
+    <!-- <VDivider class="my-2" /> -->
+
     <VListSubheader class="text-overline">
       Settings
     </VListSubheader>

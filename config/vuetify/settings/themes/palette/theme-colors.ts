@@ -137,7 +137,7 @@ export const colors = {
   },
 
   'select-background': {
-    dark: '#242838',
+    dark: '#000',
     light: '#fafbfc',
   },
 

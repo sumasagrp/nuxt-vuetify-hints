@@ -96,11 +96,14 @@ export default {
 
   VTextarea: {
     rounded: 'lg',
+    density: 'compact',
     hideDetails: false,
     variant: 'outlined',
     color: 'field-outline-focus',
     bgColor: 'text-field-background',
     rows: 3,
+    persistentPlaceholder: true,
+
   },
 
   VTooltip: { location: 'bottom' },

@@ -24,7 +24,7 @@ definePageMeta({
           Applied Jobs
         </SettingsButton>
 
-        <SettingsButton light size="large">
+        <SettingsButton prepend-icon="i-mdi:bookmark-outline" light size="large">
           My saved jobs
         </SettingsButton>
       </div>

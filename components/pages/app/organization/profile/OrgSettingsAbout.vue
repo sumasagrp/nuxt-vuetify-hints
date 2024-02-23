@@ -71,8 +71,9 @@ async function updateOrgAbout() {
         v-model.trim="orgAboutForm.orgAbout"
         auto-grow
         counter
-        label="Organization about"
         maxlength="500"
+        label="Organization about"
+        persistent-hint
       />
 
       <template #footer>
