@@ -4,6 +4,12 @@ export default defineNuxtConfig({
 
   ssr: true,
 
+  routeRules: {
+    // Homepage pre-rendered at build time
+    '/': { prerender: true },
+
+  },
+
   modules: [
     '@unocss/nuxt',
     '@pinia/nuxt',
