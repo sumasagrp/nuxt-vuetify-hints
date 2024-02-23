@@ -4,28 +4,20 @@ export default defineNuxtConfig({
 
   ssr: true,
 
+  unocss: {
+    icons: true,
+  },
+
   modules: [
     '@unocss/nuxt',
     '@pinia/nuxt',
     '@vueuse/nuxt',
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode',
     'unplugin-fonts/nuxt',
     'vuetify-nuxt-module',
-    '@nuxtjs/color-mode',
-
+    'nuxt-lodash',
   ],
-
-  tailwindcss: {
-    config: {
-      theme: {
-        fontFamily: {},
-      },
-    },
-  },
-
-  unocss: {
-    icons: true,
-  },
 
   colorMode: {
     preference: 'system', // default value of $colorMode.preference
@@ -65,15 +57,9 @@ export default defineNuxtConfig({
 
     presets: [
       {
-        from: 'lodash-es',
-        imports: ['cloneDeep', 'isEqual', 'isArray', 'isObject', 'isEmpty', 'isFunction', 'omit'],
-      },
-
-      {
         from: 'vuetify',
         imports: ['useDisplay', 'useTheme'],
       },
-
     ],
   },
 
@@ -84,7 +70,6 @@ export default defineNuxtConfig({
   }],
 
   vite: {
-
     vue: {
       script: {
         defineModel: true,
@@ -143,7 +128,6 @@ export default defineNuxtConfig({
       ssrClientHints: {
         viewportSize: true,
       },
-
       styles: {
         configFile: 'assets/vuetify/settings.scss',
       },

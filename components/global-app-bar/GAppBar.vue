@@ -1,6 +1,5 @@
 <script setup lang="ts">
 const route = useRoute()
-
 const hideAppBar = computedEager(() => !route.meta.hideAppBar)
 // const isNotEmptyAppBar = computedEager(() => !route.meta.emptyAppBar)
 </script>

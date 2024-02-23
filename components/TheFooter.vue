@@ -44,107 +44,105 @@ const columns = [
 </script>
 
 <template>
-  <div v-show="!hideFooter" class="mb-12 mt-n1 ">
-    <VFooter>
-      <VSheet :width="1475" class="bg-redx mx-auto bg-background p-5">
-        <div class="lg:flex md:justify-between">
-          <!-- ** Skriptjobs logo  -->
-          <div class="mb-10 md:mb-5 prevent-select md:w-8/12 lg:w-4/12 text-lg mr-7">
-            <p class="my-2">
-              We made job hunting and recruiting a fun thing to do. Why overcomplcating matters,
-              talent is everywhere, we aim to be the proxy that links talent with opportunity.
-            </p>
+  <VFooter v-show="!hideFooter">
+    <VSheet :width="1475" class="bg-redx mx-auto bg-background p-5">
+      <div class="lg:flex md:justify-between">
+        <!-- ** Skriptjobs logo  -->
+        <div class="mb-10 md:mb-5 prevent-select md:w-8/12 lg:w-4/12 text-lg mr-7">
+          <p class="my-2">
+            We made job hunting and recruiting a fun thing to do. Why overcomplcating matters,
+            talent is everywhere, we aim to be the proxy that links talent with opportunity.
+          </p>
 
-            <p class="mt-4 text-overline mb-2">
-              Need help? We've got you
-            </p>
+          <p class="mt-4 text-overline mb-2">
+            Need help? We've got you
+          </p>
 
-            <div class="flex gap-x-2">
-              <SettingsButton light>
-                Support
-              </SettingsButton>
+          <div class="flex gap-x-2">
+            <SettingsButton light>
+              Support
+            </SettingsButton>
 
-              <SettingsButton light>
-                Help Center
-              </SettingsButton>
-            </div>
-          </div>
-
-          <!-- ** Columns  -->
-          <div class="grid grid-cols-2 gap-8 sm:grid-cols-3">
-            <div v-for="{ name, children } in columns" :key="name">
-              <h2 class="mb-6 text-sm font-semibold uppercase">
-                {{ name }}
-              </h2>
-
-              <!-- ** Column Links  -->
-              <ul>
-                <li v-for="{ name: childName, link } in children" :key="childName" class="mb-4">
-                  <a :href="link" class="hover:underline" target="_blank">
-                    {{ capitalize(childName) }}
-                  </a>
-                </li>
-              </ul>
-            </div>
+            <SettingsButton light>
+              Help Center
+            </SettingsButton>
           </div>
         </div>
 
-        <!-- ** Divider Line  -->
-        <VDivider class="my-4" />
+        <!-- ** Columns  -->
+        <div class="grid grid-cols-2 gap-8 sm:grid-cols-3">
+          <div v-for="{ name, children } in columns" :key="name">
+            <h2 class="mb-6 text-sm font-semibold uppercase">
+              {{ name }}
+            </h2>
 
-        <div class="flex">
-          <VRow>
-            <VCol
-              :cols="!mdAndUp && '12'"
-              :order="smAndDown && 'last'"
-              align-self="center"
-              class="flex flex-col gap-y-3"
-            >
-              <!-- ** Copyright  -->
-              <div class="flex text-sm flex-col">
-                <div :class="[{ 'inline-flex': smAndUp }]" class="gap-3">
-                  <div>
-                    © 2022-{{ new Date().getFullYear() }}
-                    <a class="hover:underline" href="#"> Skriptjôbs </a> - All Rights Reserved
-                  </div>
+            <!-- ** Column Links  -->
+            <ul>
+              <li v-for="{ name: childName, link } in children" :key="childName" class="mb-4">
+                <a :href="link" class="hover:underline" target="_blank">
+                  {{ capitalize(childName) }}
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-                  <div class="flex flex-wrap gap-3">
-                    <a class="hover:underline" href="#"> Terms of Use </a>
-                    <a class="hover:underline" href="#"> Privacy Policy </a>
-                    <a class="hover:underline" href="#"> Use of Data </a>
-                  </div>
+      <!-- ** Divider Line  -->
+      <VDivider class="my-4" />
+
+      <div class="flex">
+        <VRow>
+          <VCol
+            :cols="!mdAndUp && '12'"
+            :order="smAndDown && 'last'"
+            align-self="center"
+            class="flex flex-col gap-y-3"
+          >
+            <!-- ** Copyright  -->
+            <div class="flex text-sm flex-col">
+              <div :class="[{ 'inline-flex': smAndUp }]" class="gap-3">
+                <div>
+                  © 2022-{{ new Date().getFullYear() }}
+                  <a class="hover:underline" href="#"> Skriptjôbs </a> - All Rights Reserved
+                </div>
+
+                <div class="flex flex-wrap gap-3">
+                  <a class="hover:underline" href="#"> Terms of Use </a>
+                  <a class="hover:underline" href="#"> Privacy Policy </a>
+                  <a class="hover:underline" href="#"> Use of Data </a>
                 </div>
               </div>
+            </div>
 
-              <!-- ** Made with ...  -->
-              <div>
-                Made with <span style="font-size: 13px"> 💜</span> in Sweden
-                <span style="font-size: 15px"> 🇸🇪</span>
-              </div>
-            </VCol>
+            <!-- ** Made with ...  -->
+            <div>
+              Made with <span style="font-size: 13px"> 💜</span> in Sweden
+              <span style="font-size: 15px"> 🇸🇪</span>
+            </div>
+          </VCol>
 
-            <VCol align-self="center" cols="12" sm="auto">
-              <!-- ** Social Icons and Theming  -->
-              <div class="gap-y-2 flex space-x-6 sm:mt-0 sm:justify-end align-center">
-                <!-- ** Theme Controls  -->
-                <theme-switch />
+          <VCol align-self="center" cols="12" sm="auto">
+            <!-- ** Social Icons and Theming  -->
+            <div class="gap-y-2 flex space-x-6 sm:mt-0 sm:justify-end align-center">
+              <!-- ** Theme Controls  -->
+              <theme-switch />
 
-                <!-- ** Social icons  -->
-                <a
-                  v-for="{ title, icon, link } in socialIcons"
-                  :key="title"
-                  :href="link"
-                  target="_blank"
-                >
+              <!-- ** Social icons  -->
+              <a
+                v-for="{ title, icon, link } in socialIcons"
+                :key="title"
+                :href="link"
+                target="_blank"
+              >
 
-                  <v-icon :icon="icon" />
+                <v-icon :icon="icon" />
 
-                </a>
-              </div>
-            </VCol>
-          </VRow>
-        </div>
-      </VSheet>
-    </VFooter>
-  </div>
+              </a>
+            </div>
+          </VCol>
+        </VRow>
+      </div>
+    </VSheet>
+  </VFooter>
 </template>

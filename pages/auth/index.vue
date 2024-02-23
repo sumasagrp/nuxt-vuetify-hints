@@ -4,7 +4,6 @@ const { isLoggedIn, loading, loadingGoogle } = toRefs(useAuthStore())
 definePageMeta({
   hideAppBar: true,
   hideFooter: true,
-  containerWidth: '545px',
 })
 
 const { isSignInView } = toRefs(useRoutingStore())
@@ -15,29 +14,31 @@ const title = computedEager(() => {
 </script>
 
 <template>
-  <div
-    v-show="!isLoggedIn"
-    :class="{ disabled: loading || loadingGoogle }"
-    class="gap-7 flex flex-column py-10x px-3 mx-auto justify-center max-w-[545px]"
-  >
-    <GAppBarLogo />
-
-    <VCard
-      :class="[]"
-      class="pt-5 rounded-lg p-8"
+  <div>
+    <div
+      v-show="!isLoggedIn"
+      :class="{ disabled: loading || loadingGoogle }"
+      class="gap-7 flex flex-column py-10x px-3 mx-auto justify-center max-w-[545px]"
     >
-      <VCardTitle class="text-h5x font-weight-bold mt-5 mb-8 ml-1">
-        {{ title }}
-      </VCardTitle>
+      <GAppBarLogo />
 
-      <VCardText>
-        <!-- * SignIn, SignOut & PasswordReet Views] -->
-        <NuxtPage />
-        <!-- * External Authentication Provider buttons ] -->
-        <AuthProviders />
-      </VCardText>
-    </VCard>
+      <VCard
+        :class="[]"
+        class="pt-5 rounded-lg pa-8"
+      >
+        <VCardTitle class="text-h5x font-weight-bold mt-5 mb-8 ml-1">
+          {{ title }}
+        </VCardTitle>
 
-    <AuthFooter />
+        <VCardText>
+          <!-- * SignIn, SignOut & PasswordReet Views] -->
+          <NuxtPage />
+          <!-- * External Authentication Provider buttons ] -->
+          <AuthProviders />
+        </VCardText>
+      </VCard>
+
+      <AuthFooter />
+    </div>
   </div>
 </template>

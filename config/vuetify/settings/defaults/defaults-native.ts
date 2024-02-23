@@ -3,7 +3,7 @@ export default {
 
   VMain: {
     // fixes problem with VMain rendering under the appbar on SSR
-    style: 'padding-top: 90px; padding-bottom: 90px',
+    style: 'padding-top: 90px;',
   },
 
   VAppBar: {

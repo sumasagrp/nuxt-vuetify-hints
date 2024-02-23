@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-3">
+  <div class="flex flex-col gap-3 bg-indigox">
     <HomeHero />
     <HomeJobsSearch />
   </div>
