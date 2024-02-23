@@ -64,7 +64,7 @@ defineProps({
     type: Object,
     default: () => ({
       text: '',
-      icon: '$mdiGithub',
+      icon: 'i-mdi:github',
     }),
   },
 
@@ -127,7 +127,7 @@ defineProps({
             <VBtn class="rounded-xl border" color="link" size="x-large" variant="outlined">
               <div>
                 {{ button.text }}
-                <VIcon end icon="$mdiArrowRight" size="17" />
+                <VIcon end icon="i-mdi:arrow-right" size="17" />
               </div>
             </VBtn>
           </div>

@@ -3,9 +3,6 @@
  */
 
 export const useRoutingStore = defineStore('global-routing', {
-  persist: {
-    paths: ['scrollPosition'],
-  },
 
   getters: {
     route() {

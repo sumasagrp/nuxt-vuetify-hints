@@ -17,7 +17,6 @@
           :active="false"
           class="border-0 no-gutters"
           color="appbar-buttons"
-          disabled=""
           size="large"
           variant="plain"
         >
@@ -40,7 +39,7 @@
       <VDivider class="mx-3" vertical />
 
       <div class="gap-3 flex">
-        <VBtn class="rounded-xl border-0" color="link" size="large" to="/auth" variant="plain">
+        <VBtn class="rounded-xl border-0" color="link" size="large" to="/auth/signin" variant="plain">
           Sign In
         </VBtn>
 

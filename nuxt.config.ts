@@ -61,7 +61,7 @@ export default defineNuxtConfig({
 
   imports: {
     injectAtEnd: true,
-    dirs: ['stores'],
+    dirs: ['stores', 'scripts/**/*.{ts,js}'],
 
     presets: [
       {
@@ -84,6 +84,13 @@ export default defineNuxtConfig({
   }],
 
   vite: {
+
+    vue: {
+      script: {
+        defineModel: true,
+        propsDestructure: true,
+      },
+    },
 
     ssr: {
       noExternal: ['vuetify'],

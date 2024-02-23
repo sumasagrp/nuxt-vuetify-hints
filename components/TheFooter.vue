@@ -1,6 +1,10 @@
 <script setup>
 const { smAndDown, mdAndUp, smAndUp } = useDisplay()
 
+const route = useRoute()
+
+const hideFooter = computedEager(() => route.meta.hideFooter)
+
 const socialIcons = [
   { title: 'github', icon: 'i-mdi:github', link: 'https://github.com/Skriptjobs' },
   { title: 'linkedin', icon: 'i-mdi:linkedin', link: 'https://www.linkedin.com/company/skriptjobs/' },
@@ -40,7 +44,7 @@ const columns = [
 </script>
 
 <template>
-  <div class="mb-12 mt-n1 ">
+  <div v-show="!hideFooter" class="mb-12 mt-n1 ">
     <VFooter>
       <VSheet :width="1475" class="bg-redx mx-auto bg-background pa-5">
         <div class="lg:flex md:justify-between">
