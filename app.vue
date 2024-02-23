@@ -1,4 +1,4 @@
-<script setup lang="ts" ">
+<script setup lang="ts">
 const title = 'Skriptjobs™ – Discover your next career journey'
 const description = 'Join us and start exploring companies, jobs or talent. We made job hunting and recruiting a fun thing to do. We aim to be the proxy that links talent with opportunity.'
 const image = 'https://skriptjobs.com/Skriptjobs-Meta-ShareImg_Hero-EN.png'
