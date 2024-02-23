@@ -9,24 +9,27 @@ export const colors = {
     dark: '#625afa',
     light: '#625afa',
   },
+
   'error': {
     dark: '#ff4081',
     light: '#ff4081',
   },
+
   'surface': {
-    dark: '#1e222f',
+    dark: '#0a0a0a',
     light: '#fff',
   },
+
   'surface-hover': {
     dark: '#222635',
     light: '#fcf8ff',
   },
 
   'background': {
-    dark: '#191a23',
-    // light: '#f5f7fa'
+    dark: '#0a0a0a',
     light: '#fafafa',
   },
+
   'link': {
     dark: '#9499ff',
     light: '#7856ff',
@@ -59,8 +62,8 @@ export const colors = {
   },
 
   'appbar-background': {
-    dark: '#191a23',
-    light: '#f5f7fa',
+    dark: '#0a0a0a',
+    light: '#fff',
   },
 
   'on-background': {
@@ -84,7 +87,7 @@ export const colors = {
   },
 
   'appbar-buttons': {
-    dark: '#fff',
+    dark: '#ededed',
     light: '#0B1215',
   },
 
@@ -100,20 +103,21 @@ export const colors = {
 
   'accent-button': {
     dark: '#272939',
-    light: '#fff',
+    light: '#ededed',
   },
+
   'accent-button-icon': {
     dark: '',
     light: '#2d8a9d',
   },
 
   'light-button': {
-    dark: '#242838',
-    light: materialColors.shades.white,
+    dark: '#0a0a0a',
+    light: '#fff',
   },
 
   'black-button': {
-    dark: '#242838',
+    dark: '#ededed',
     light: '#0B1215',
   },
 
@@ -123,12 +127,12 @@ export const colors = {
   },
 
   'field-outline-focus': {
-    dark: '#7281ff',
-    light: '#625afa',
+    dark: materialColors.grey.darken3,
+    light: materialColors.grey.darken1,
   },
 
   'text-field-background': {
-    dark: '#242838',
+    dark: '#000',
     light: '#fafbfc',
   },
 
@@ -150,7 +154,7 @@ export const colors = {
   get 'settings-card-footer'() {
     return {
       dark: this.surface.dark,
-      light: materialColors.grey.lighten5,
+      light: '#f7f7f7',
     }
   },
 

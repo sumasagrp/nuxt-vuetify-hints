@@ -1,8 +1,8 @@
 <template>
   <!-- <OrgSettingsAvatar /> -->
 
-  <div class="flex flex-col gap-3">
-    <div class="grid grid-cols-1 gap-3 lg:grid-cols-2">
+  <div class="flex flex-col gap-8">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
       <OrgSettingsName />
       <OrgSettingsAccountUrl />
     </div>
@@ -13,7 +13,7 @@
 
     <OrgSettingsSocial />
 
-    <div class="grid grid-cols-1 gap-3 lg:grid-cols-2">
+    <div class="grid grid-cols-1 gap-8 lg:grid-cols-2">
       <OrgSettingsFounded />
       <OrgSettingsType />
       <OrgSettingsSize />

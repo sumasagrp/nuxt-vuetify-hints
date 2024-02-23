@@ -9,6 +9,7 @@ export default {
 
   VAppBar: {
     flat: true,
+    density: 'compact',
     color: 'transparent',
     VBtn: {
       ripple: false,
@@ -52,9 +53,11 @@ export default {
     color: 'field-outline-focus',
     bgColor: 'text-field-background',
     persistentPlaceholder: true,
+    rounded: 'lg',
   },
 
   VCombobox: {
+    rounded: 'lg',
     hideDetails: false,
     density: 'compact',
     variant: 'outlined',
@@ -65,7 +68,7 @@ export default {
   },
 
   VAutocomplete: {
-    // autoSelectFirst: true,
+    rounded: 'lg',
     hideDetails: false,
     density: 'compact',
     variant: 'outlined',
@@ -80,6 +83,7 @@ export default {
   },
 
   VSelect: {
+    rounded: 'lg',
     autoSelectFirst: true,
     hideDetails: false,
     density: 'compact',
@@ -91,6 +95,7 @@ export default {
   },
 
   VTextarea: {
+    rounded: 'lg',
     hideDetails: false,
     variant: 'outlined',
     color: 'field-outline-focus',

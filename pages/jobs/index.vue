@@ -54,7 +54,7 @@ definePageMeta({
               Search
             </SettingsButton>
 
-            <SettingsButton append-icon="i-mdi:chevron-down" class="mr-1" light height="40">
+            <SettingsButton light append-icon="i-mdi:chevron-down" class="mr-1" height="40">
               Sort by relevance
             </SettingsButton>
 
