@@ -40,7 +40,8 @@ onMounted(() => {
 
 <style>
 html.dark,
-html.light {
+html.light html,
+sepia {
   background-color: rgba(var(--v-theme-background)) !important;
 }
 </style>

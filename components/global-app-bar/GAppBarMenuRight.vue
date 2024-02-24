@@ -19,6 +19,7 @@
           color="appbar-buttons"
           size="large"
           variant="plain"
+          to="/companies"
         >
           Browse Companies
         </VBtn>

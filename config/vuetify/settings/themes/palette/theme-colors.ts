@@ -16,7 +16,7 @@ export const colors = {
   },
 
   'surface': {
-    dark: '#0a0a0a',
+    dark: '#f1f5f9',
     light: '#fff',
   },
 
@@ -26,7 +26,7 @@ export const colors = {
   },
 
   'background': {
-    dark: '#0a0a0a',
+    dark: '#f1f5f9',
     light: '#fafafa',
   },
 
@@ -62,7 +62,7 @@ export const colors = {
   },
 
   'appbar-background': {
-    dark: '#0a0a0a',
+    dark: '#f1f5f9',
     light: '#fff',
   },
 
@@ -112,7 +112,7 @@ export const colors = {
   },
 
   'light-button': {
-    dark: '#0a0a0a',
+    dark: '#f1f5f9',
     light: '#fff',
   },
 

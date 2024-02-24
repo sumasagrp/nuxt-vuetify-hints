@@ -54,12 +54,18 @@ export default defineNuxtConfig({
   imports: {
     injectAtEnd: true,
     dirs: ['stores', 'scripts/**/*.{ts,js}', 'data/**/*.{ts,js}'],
-
     presets: [
       {
         from: 'vuetify',
         imports: ['useDisplay', 'useTheme'],
       },
+
+      {
+        // import * as Yup from 'yup'
+        from: 'yup',
+        imports: [['*', 'Yup']],
+      },
+
     ],
   },
 

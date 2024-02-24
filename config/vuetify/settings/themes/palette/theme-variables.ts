@@ -35,7 +35,7 @@ export const variables = {
   },
 
   'app-background-pattern-color': {
-    dark: '#0a0a0a',
+    dark: '#f1f5f9',
     light: '#F9F9F9',
   },
 
