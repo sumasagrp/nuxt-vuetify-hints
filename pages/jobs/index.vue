@@ -20,7 +20,7 @@ definePageMeta({
 
     <div class="py-5 border-b pl-3 bg-redx gap-y-4 flex flex-col bg-redx w-100 items-end justify-center pr-7x">
       <div class="flex gap-2">
-        <SettingsButton light size="large">
+        <SettingsButton prepend-icon="i-mdi:check-all" light size="large">
           Applied Jobs
         </SettingsButton>
 
@@ -32,13 +32,13 @@ definePageMeta({
   </div>
 
   <div class="h-full grid grid-cols-12 gap-3 pt-5">
-    <div class="col-span-3">
+    <div class="lg:block hidden col-span-3">
       <div class="sticky top-20">
         <search-filters />
       </div>
     </div>
 
-    <div class="col-span-9">
+    <div class="col-span-12 lg:col-span-9">
       <v-sheet height="80" color="background" class="sticky top-20 align-center">
         <div class="flex flex-col h-100 w-100 align-center justify-center">
           <div class="w-100 flex align-center  bg-greenx">

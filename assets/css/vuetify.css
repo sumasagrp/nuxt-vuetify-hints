@@ -153,3 +153,18 @@ h6,
   font-size: 2rem!important;
 }
 
+
+.autocomplete-list-bg-color .v-list {
+  border-radius: 0.5rem!important;
+  margin-top:0.5rem;
+  margin-bottom:0.5rem;
+}
+
+.v-menu > .v-overlay__content > .v-card, .v-menu > .v-overlay__content > .v-sheet, .v-menu > .v-overlay__content > .v-list {
+padding: 10px;
+}
+
+.v-list-item--density-compact:not(.v-list-item--nav).v-list-item--one-line {
+  border-radius: 0.5rem!important;
+
+}
