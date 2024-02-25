@@ -2,6 +2,10 @@
   <div class="flex flex-col gap-3 bg-indigox">
     <HomeHero />
     <HomeJobsSearch />
+
+    <div class="grid grid-cols-2 gap-2">
+      <BlogCard v-for="card in 2" />
+    </div>
   </div>
 </template>
 

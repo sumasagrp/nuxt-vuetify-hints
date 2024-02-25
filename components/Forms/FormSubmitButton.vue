@@ -8,9 +8,14 @@ defineProps({
 </script>
 
 <template>
-  <VBtn block class="rounded-lg border" size="large" type="submit">
-    <div>
-      {{ text }}
-    </div>
-  </VBtn>
+  <SettingsButton
+    color="black-button"
+    size="large"
+    block
+    variant="flat"
+    light
+    type="submit"
+  >
+    {{ text }}
+  </SettingsButton>
 </template>

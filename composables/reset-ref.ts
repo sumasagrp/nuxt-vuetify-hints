@@ -1,9 +1,11 @@
-export function useResetRef(reference, options) {
+import type { UnwrapRef } from 'vue'
+
+export function useResetRef<T>(reference: Ref<T> | UnwrapRef<T>, options?: any) {
   // Check if the reference is a Ref or a Reactive variable
   if (!isRef(reference) && !isReactive(reference))
     throw new Error('A Ref or a Reactive variable should be passed as an argument to resetRef')
 
-  let initialRefValue
+  let initialRefValue: Ref<any> | UnwrapRef<any>
 
   if (isRef(reference)) {
     // Make a deep copy of the initial Ref value

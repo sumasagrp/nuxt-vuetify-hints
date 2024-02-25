@@ -24,52 +24,31 @@ export const variables = {
     light: 'rgba(200, 200, 200, .2)',
   },
 
-  'app-background': {
-    dark: '#1f2130',
-    light: '#f6f8fa',
-  },
-
-  'app-typography': {
-    dark: '#adbac7',
-    light: '#3b4256',
-  },
-
   'app-background-pattern-color': {
     dark: '#ffafafa',
     light: '#F9F9F9',
-  },
-
-  'app-skriptjobs-logo-appbar-title': {
-    dark: '#adbac7',
-    light: '',
-  },
-
-  'app-skriptjobs-title': {
-    dark: '#000',
-    light: '#000',
-  },
-
-  'app-skriptjobs-logo-titlexxxxx': {
-    dark: '#adbac7',
-    light: '#2c3b49',
   },
 
   'medium-emphasis-opacity': {
     dark: 0.68,
     light: 0.68,
   },
+
   'field-border-opacity': {
     dark: 1,
     light: 1,
   },
+
   'field-label': {
     dark: '#cbd4dc',
     light: '#292929',
   },
+
   'field-outline': {
     dark: '#393a4c',
     light: '#e4e1e1',
   },
+
   'appbar-menu-item-hover': {
     dark: '#292f36',
     light: '',

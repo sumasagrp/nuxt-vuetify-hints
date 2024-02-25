@@ -1,6 +1,7 @@
 export function useFormFields(store, propertyPath) {
   const propertyPathParts = propertyPath.split('.')
-  const data = propertyPathParts.reduce((obj, part) => obj && obj[part], store)
+
+  const data = propertyPathParts.reduce((obj: any, part: string) => obj && obj[part], store)
 
   const formFields = reactive({
     names: { ...data },
@@ -11,8 +12,6 @@ export function useFormFields(store, propertyPath) {
   const formRef = ref()
 
   function reset() {
-    // Reset validations,
-    // since we are validating lazily.
     formRef.value.resetValidation()
 
     // Reset form to initial values.

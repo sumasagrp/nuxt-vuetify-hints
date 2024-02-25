@@ -1,27 +1,7 @@
 <script setup>
 const organizationStore = useOrganizationStore()
-const { activeOrganization } = toRefs(organizationStore)
-
-const { orgName = null } = activeOrganization.value || {}
-
-const orgNameForm = reactive({
-  orgName,
-})
-
-// Use the useResetRef composable to manage the state of the profile form
-const { reset, hasNewValues, syncInitialValues } = useResetRef(orgNameForm)
-
-const nameForm = ref()
-
-// Get form values to its default values.
-function resetForm() {
-  // Reset validations,
-  // since we are validating lazily.
-  nameForm.value.resetValidation()
-  reset()
-}
-
-const validationPassed = ref()
+const { updateOrgName, loading } = validateAndSave()
+const { formFields, formRef, changed, sync, reset } = useFormFields(organizationStore, 'activeOrganization.orgName')
 
 // Validation rules for the profile form fields
 const rules = {
@@ -29,82 +9,38 @@ const rules = {
     (value) => {
       try {
         Yup.string().required('You need to choose a name').validateSync(value)
-        return true // Return true if validation passes
+        return true
       }
       catch (error) {
-        return error.message // Return the error message if validation fails
+        return error.message
       }
     },
   ],
 }
-
-/**
- * Asynchronously saves the profile based on a validation event.
- *
- * @param {object} validationEvent - An object representing the validation event.
- */
-
-const isSavingLoading = ref(false)
-
-async function updateOrgName(validationEvent) {
-  // Extract the 'valid' property from the validation event
-  const { valid } = await validationEvent
-
-  // If the validation is not valid, show an alert and stop the process
-  if (!valid) {
-    snackbar('Please, correct the required fields.', 'error')
-    return
-  }
-
-  // Set the isSavingLoading flag to true to indicate that the save operation is in progress
-  isSavingLoading.value = true
-
-  try {
-    await organizationStore.updateOrgName({ ...orgNameForm })
-
-    // Update the initial values to reflect the current state of the profile form
-    syncInitialValues()
-
-    snackbar('Name has been updated.')
-  }
-  catch (error) {
-    snackbar(`An error occurred: ${error} `, 'error')
-  }
-  finally {
-    // Regardless of the outcome, set isSavingLoading to false
-    // to indicate the end of the save operation
-    isSavingLoading.value = false
-  }
-}
 </script>
 
 <template>
-  <VFordivm
-    ref="nameForm"
+  <VForm
+    ref="formRef"
     v-model="validationPassed"
-    @keyup.esc="resetForm()"
-    @submit.prevent="updateOrgName"
+    @submit.prevent="submitForm($event, updateOrgName, formFields, sync)"
   >
-    <SettingsCard
-      :key="activeOrganization.orgName"
-      :kbd="hasNewValues"
-      fill-height
-      title="Organization Display Name"
-    >
+    <SettingsCard :kbd="changed" fill-height title="Organization name">
       <!-- * [ Org name field ] -->
       <VTextField
-        v-model.trim="orgNameForm.orgName"
+        v-model.trim="formFields.orgName"
         :rules="rules.orgName"
         counter
-        label="Organization name"
-        maxlength="90"
+        label="Organization Name"
+        maxlength="80"
+        persistent-hint
       />
 
       <template #footer>
         <VSpacer />
-        <SettingsButton v-show="hasNewValues" light title="Reset" @click="resetForm()" />
-        <SettingsButton :disabled="!hasNewValues" :loading="isSavingLoading" submit title="Save" />
+        <SettingsButton v-show="changed" light title="Reset" @click="reset" />
+        <SettingsButton :disabled="!changed" :loading="loading" submit title="Save" />
       </template>
     </SettingsCard>
-  </VFordivm>
+  </VForm>
 </template>

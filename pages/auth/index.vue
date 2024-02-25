@@ -23,19 +23,22 @@ const title = computedEager(() => {
       <GAppBarLogo />
 
       <VCard
-        :class="[]"
-        class="pt-5 rounded-lg pa-8"
+        class="mt-5"
       >
-        <VCardTitle class="text-h5x font-weight-bold mt-5 mb-8 ml-1">
-          {{ title }}
-        </VCardTitle>
+        <TopBorderHighlight />
 
-        <VCardText>
-          <!-- * SignIn, SignOut & PasswordReet Views] -->
-          <NuxtPage />
-          <!-- * External Authentication Provider buttons ] -->
-          <AuthProviders />
-        </VCardText>
+        <div class="pt-5 pa-8">
+          <VCardTitle class="text-h5x font-weight-bold mt-5 mb-8 ml-1">
+            {{ title }}
+          </VCardTitle>
+
+          <VCardText>
+            <!-- * SignIn, SignOut & PasswordReet Views] -->
+            <NuxtPage />
+            <!-- * External Authentication Provider buttons ] -->
+            <AuthProviders />
+          </VCardText>
+        </div>
       </VCard>
 
       <AuthFooter />
