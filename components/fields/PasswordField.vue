@@ -9,6 +9,7 @@ const icon = computed(() => (isPasswordVisible.value ? 'i-mdi:eye' : 'i-mdi:eye-
   <VTextField
     v-model="password"
     :append-inner-icon="password && icon"
+    placeholder="••••••••"
     :type="isPasswordVisible ? 'text' : 'password'"
     label="Password"
     @click:append-inner="togglePasswordVisibility()"

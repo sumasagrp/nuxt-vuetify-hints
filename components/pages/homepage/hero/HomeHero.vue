@@ -14,11 +14,8 @@
       </p>
 
       <p class="we-made-job-hunting text-2xl">
-        Ready to take your career to the next level?  <br>
-        Discover awesome companies seeking talent
-        like yours. Let's ignite that connection so you can find the right job.
+        Unlock unlimited recruiting potential! Join our waiting list for a chance to access our platform for free—for life, including the ability to post job ads at no cost!  🌟
       </p>
-
       <HomeHeroActionButtons />
     </div>
 

@@ -98,7 +98,7 @@ const { mdAndUp } = useDisplay()
 
           <VSpacer />
 
-          <div :class="!mdAndUp && 'mt-3'" class="flex gap-3">
+          <div :class="!mdAndUp && 'mt-3'" class="flex gap-6">
             <slot name="right-actions" />
           </div>
         </div>

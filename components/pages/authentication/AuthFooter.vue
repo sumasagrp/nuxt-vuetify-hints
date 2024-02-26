@@ -38,7 +38,7 @@ const links = [
       </template>
     </div>
 
-    <div class="flex gap-3 mt-2">
+    <div class="flex gap-6 mt-2">
       <NuxtLink
         v-for="{ name, to } in links"
         :key="name"

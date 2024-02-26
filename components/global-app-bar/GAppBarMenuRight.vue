@@ -39,7 +39,7 @@
 
       <VDivider class="mx-3" vertical />
 
-      <div class="gap-3 flex">
+      <div class="gap-6 flex">
         <VBtn class="rounded-xl border-0" color="link" size="large" to="/auth/signin" variant="plain">
           Sign In
         </VBtn>

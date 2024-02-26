@@ -32,7 +32,7 @@ definePageMeta({
     </div>
   </div>
 
-  <div class="h-full grid grid-cols-12 gap-3 pt-5">
+  <div class="h-full grid grid-cols-12 gap-6 pt-5">
     <div class="lg:block hidden col-span-3">
       <div class="sticky top-24">
         <SNavBarOrganization />

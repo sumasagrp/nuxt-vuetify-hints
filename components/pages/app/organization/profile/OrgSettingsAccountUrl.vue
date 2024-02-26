@@ -22,7 +22,6 @@ const rules = {
 <template>
   <VForm
     ref="formRef"
-    v-model="validationPassed"
     @submit.prevent="submitForm($event, updateOrgUrl, formFields, sync)"
   >
     <SettingsCard :kbd="changed" fill-height title="Skriptjobs public  URL">

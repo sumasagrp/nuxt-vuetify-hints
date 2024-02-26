@@ -21,7 +21,7 @@ const { smAndDown } = useDisplay()
       size="x-large"
     >
       <div>
-        Request early access
+        Join our waiting list
         <v-icon icon="i-mdi:chevron-right" />
       </div>
     </VBtn>

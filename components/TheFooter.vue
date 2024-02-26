@@ -101,13 +101,13 @@ const columns = [
           >
             <!-- ** Copyright  -->
             <div class="flex text-sm flex-col">
-              <div :class="[{ 'inline-flex': smAndUp }]" class="gap-3">
+              <div :class="[{ 'inline-flex': smAndUp }]" class="gap-6">
                 <div>
                   © 2022-{{ new Date().getFullYear() }}
                   <a class="hover:underline" href="#"> Skriptjôbs </a> - All Rights Reserved
                 </div>
 
-                <div class="flex flex-wrap gap-3">
+                <div class="flex flex-wrap gap-6">
                   <a class="hover:underline" href="#"> Terms of Use </a>
                   <a class="hover:underline" href="#"> Privacy Policy </a>
                   <a class="hover:underline" href="#"> Use of Data </a>
