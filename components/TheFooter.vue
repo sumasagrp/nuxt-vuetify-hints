@@ -117,8 +117,8 @@ const columns = [
 
             <!-- ** Made with ...  -->
             <div>
-              Made with <span style="font-size: 13px"> 💜</span> in Sweden
-              <span style="font-size: 15px"> 🇸🇪</span>
+              Made with <span style="font-size: 13px"> ☕️ </span> in Sweden
+              <span style="font-size: 10px"> 🇸🇪</span>
             </div>
           </VCol>
 

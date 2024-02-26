@@ -80,7 +80,9 @@ const { mdAndUp } = useDisplay()
 </script>
 
 <template>
-  <v-card class="flex flex-col h-full rounded-lg w-100">
+  <v-card class="flex flex-col h-full rounded-lg w-100 mt-1">
+    <TopBorderHighlight />
+
     <div
       v-if="$slots.right || $slots.scrollable || title || subtitle"
       :class="[

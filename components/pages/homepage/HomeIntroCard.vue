@@ -65,7 +65,7 @@ defineProps({
         {{ title }}
       </h2>
 
-      <div class="text-lg h-full">
+      <div class="text-lg h-full text-[#]">
         {{ description }}
       </div>
 
